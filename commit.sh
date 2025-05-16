@@ -27,6 +27,7 @@ if [ ! -d "./.git/" ]; then
  git remote add origin https://$USER:$PASS@github.com/$USER/$REPO
  git config --global push.default current
  git config --global init.defaultBranch $BRANCH
+ git config --global --bool push.autoSetupRemote true
 else
  git remote set-url origin https://$USER:$PASS@github.com/$USER/$REPO
 fi
